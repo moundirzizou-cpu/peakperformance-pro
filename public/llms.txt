@@ -1,0 +1,11 @@
+# HR Pulse
+
+> HR Pulse is an employee performance, evaluation, training, and reporting platform for HR teams, managers, and executives.
+
+## Pages
+
+- [Dashboard](/): Company performance overview with trends, branch and position comparisons, and top performers.
+- [Evaluation](/evaluation): Run structured employee evaluations with scored criteria.
+- [Employees](/employees): Browse employee directory and view individual performance profiles.
+- [Training](/training): Manage training requests and coordination workflows.
+- [Reports](/reports): Role-based HR reports for managers, HR branch leads, and executives.

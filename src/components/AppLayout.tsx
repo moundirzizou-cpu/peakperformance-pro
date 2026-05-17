@@ -37,12 +37,16 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         {/* Logo */}
         <div className="flex h-16 items-center justify-between px-4 border-b border-sidebar-border">
           {!collapsed && (
-            <h1 className="text-lg font-bold font-heading text-sidebar-primary tracking-tight">HR Pulse</h1>
+            <span className="text-lg font-bold font-heading text-sidebar-primary tracking-tight">HR Pulse</span>
           )}
-          <button onClick={() => setCollapsed(!collapsed)} className="hidden md:flex items-center justify-center w-8 h-8 rounded-md hover:bg-sidebar-accent transition-colors text-sidebar-muted">
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            className="hidden md:flex items-center justify-center w-8 h-8 rounded-md hover:bg-sidebar-accent transition-colors text-sidebar-muted"
+          >
             {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
           </button>
-          <button onClick={() => setMobileOpen(false)} className="md:hidden text-sidebar-muted">
+          <button onClick={() => setMobileOpen(false)} aria-label="Close navigation menu" className="md:hidden text-sidebar-muted">
             <X size={20} />
           </button>
         </div>
@@ -87,7 +91,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <main className="flex-1 flex flex-col overflow-hidden">
         {/* Top bar */}
         <header className="flex items-center h-16 px-4 md:px-6 border-b border-border bg-card shrink-0">
-          <button onClick={() => setMobileOpen(true)} className="md:hidden mr-3 text-muted-foreground">
+          <button onClick={() => setMobileOpen(true)} aria-label="Open navigation menu" className="md:hidden mr-3 text-muted-foreground">
             <Menu size={22} />
           </button>
           <div className="flex-1" />
