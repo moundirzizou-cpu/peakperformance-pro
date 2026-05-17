@@ -29,7 +29,7 @@ function EmployeeProfile({ employee, onClose }: { employee: typeof employees[0];
           <div className="flex items-center gap-5">
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-xl font-bold text-primary">{employee.avatar}</div>
             <div className="flex-1">
-              <h2 className="text-xl font-bold font-heading text-foreground">{employee.name}</h2>
+              <h1 className="text-xl font-bold font-heading text-foreground">{employee.name}</h1>
               <p className="text-muted-foreground text-sm">{employee.position} · {employee.branch}</p>
               <p className="text-muted-foreground text-xs mt-1">Manager: {employee.manager}</p>
             </div>
@@ -100,7 +100,7 @@ export default function Employees() {
           onChange={(e) => setSearch(e.target.value)}
         />
         {search && (
-          <button onClick={() => setSearch('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+          <button onClick={() => setSearch('')} aria-label="Clear search" className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
             <X size={14} />
           </button>
         )}

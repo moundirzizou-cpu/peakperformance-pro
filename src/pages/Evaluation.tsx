@@ -14,7 +14,7 @@ function StarRating({ value, onChange }: { value: number; onChange: (v: number) 
   return (
     <div className="flex gap-1">
       {Array.from({ length: 10 }, (_, i) => (
-        <button key={i} onClick={() => onChange(i + 1)} className="transition-transform hover:scale-110">
+        <button key={i} onClick={() => onChange(i + 1)} aria-label={`Rate ${i + 1} out of 10`} className="transition-transform hover:scale-110">
           <Star
             size={22}
             className={cn(
